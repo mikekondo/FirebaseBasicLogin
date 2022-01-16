@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>149608905606-57qisshrp9fnaci0u7vp12jl3qg7qbki.apps.googleusercontent.com</string>
+	<string>153647476732-rurbv18auqj68b3givam3cpumsfe1t5b.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.149608905606-57qisshrp9fnaci0u7vp12jl3qg7qbki</string>
+	<string>com.googleusercontent.apps.153647476732-rurbv18auqj68b3givam3cpumsfe1t5b</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCWVCO-Je2VwsNp9IQ6Ev0HUGLA4bmjXFM</string>
+	<string>AIzaSyBUd21CO8fwS9OOOi0eV1Z7UW40sNkRna4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>149608905606</string>
+	<string>153647476732</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.mkondo.FireBaseBasicLogin</string>
 	<key>PROJECT_ID</key>
-	<string>fir-basiclogin-1d519</string>
+	<string>fir-basiclogin-c6cce</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fir-basiclogin-1d519.appspot.com</string>
+	<string>fir-basiclogin-c6cce.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:149608905606:ios:539800c0ae97c463898a07</string>
+	<string>1:153647476732:ios:a40276145f4069af0a8c79</string>
 </dict>
 </plist>

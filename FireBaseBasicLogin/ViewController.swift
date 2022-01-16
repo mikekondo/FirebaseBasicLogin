@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import Firebase
+ 
 class ViewController: UIViewController {
 
     @IBOutlet weak var registerButton: UIButton!
@@ -54,6 +55,36 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [], animations: {
             self.view.transform = .identity
         })
+    }
+    
+    @IBAction func tappedRegisterButton(_ sender: Any) {
+        handleAuthFirebase()
+    }
+    private func handleAuthFirebase(){
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        Auth.auth().createUser(withEmail: email, password: password) { (res,err) in
+            if let err = err {
+                print("認証に失敗しました")
+                return
+            }
+            //ユーザUIDの取得
+            guard let uid = Auth.auth().currentUser?.uid else { return }
+            //ユーザの名前を取得
+            guard let name = self.usernameTextField.text else { return }
+            
+            let docData = ["email": email,"name": name,"createdAt": Timestamp()] as [String : Any]
+            
+            //コレクション名をusersにしてドキュメントをユーザUIDにしてdocDataを保存する
+            Firestore.firestore().collection("users").document(uid).setData(docData) { (err) in
+                if let err = err {
+                    print("Firestoreへの保存に失敗しました")
+                    return
+                }
+                print("Firestoreへの保存に成功しました")
+            }
+        }
+        
     }
 }
 

@@ -6,14 +6,23 @@
 //
 
 import UIKit
-
+import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //Firebaseの設定
+        FirebaseApp.configure()
+        
+        //サインアウト機能
+        let firebaseAuth = Auth.auth()
+        do{
+            try firebaseAuth.signOut()
+        }catch let signOutError as NSError {
+            print("Error signing out : %@",signOutError)
+        }
         return true
     }
 

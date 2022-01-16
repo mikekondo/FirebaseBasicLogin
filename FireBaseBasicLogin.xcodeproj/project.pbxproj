@@ -14,6 +14,7 @@
 		957F139E27925D340052C76B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957F139D27925D340052C76B /* Assets.xcassets */; };
 		957F13A127925D340052C76B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 957F139F27925D340052C76B /* LaunchScreen.storyboard */; };
 		957F13A927925F040052C76B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 957F13A827925F040052C76B /* GoogleService-Info.plist */; };
+		95FCAF8D2793BFBC00BA1B6D /* UIColor-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FCAF8C2793BFBC00BA1B6D /* UIColor-Extention.swift */; };
 		F57FA17B501AAD179E3C3A1D /* Pods_FireBaseBasicLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE069AA378901BD3E1B9BDBB /* Pods_FireBaseBasicLogin.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		957F13A027925D340052C76B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		957F13A227925D340052C76B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		957F13A827925F040052C76B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		95FCAF8C2793BFBC00BA1B6D /* UIColor-Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extention.swift"; sourceTree = "<group>"; };
 		FE069AA378901BD3E1B9BDBB /* Pods_FireBaseBasicLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireBaseBasicLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 				957F139F27925D340052C76B /* LaunchScreen.storyboard */,
 				957F13A227925D340052C76B /* Info.plist */,
 				957F13A827925F040052C76B /* GoogleService-Info.plist */,
+				95FCAF8C2793BFBC00BA1B6D /* UIColor-Extention.swift */,
 			);
 			path = FireBaseBasicLogin;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			files = (
 				957F139927925D330052C76B /* ViewController.swift in Sources */,
 				957F139527925D330052C76B /* AppDelegate.swift in Sources */,
+				95FCAF8D2793BFBC00BA1B6D /* UIColor-Extention.swift in Sources */,
 				957F139727925D330052C76B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,17 @@
 import UIKit
 import Firebase
  
+struct User{
+    let name: String
+    let createdAt: Timestamp
+    let email: String
+    
+    init(dic: [String: Any]){
+        self.name = dic["name"] as! String
+        self.createdAt = dic["createdAt"] as! Timestamp
+        self.email = dic["email"] as! String
+    }
+}
 class ViewController: UIViewController {
 
     @IBOutlet weak var registerButton: UIButton!
@@ -68,23 +79,40 @@ class ViewController: UIViewController {
                 print("認証に失敗しました")
                 return
             }
-            //ユーザUIDの取得
-            guard let uid = Auth.auth().currentUser?.uid else { return }
-            //ユーザの名前を取得
-            guard let name = self.usernameTextField.text else { return }
+            self.addUserInfoToFirestore(email: email)
+        }
+    }
+    private func addUserInfoToFirestore(email: String){
+        //ユーザUIDの取得
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        //ユーザの名前を取得
+        guard let name = self.usernameTextField.text else { return }
+        
+        let docData = ["email": email,"name": name,"createdAt": Timestamp()] as [String : Any]
+        let userRef =  Firestore.firestore().collection("users").document(uid)
+        //コレクション名をusersにしてドキュメントをユーザUIDにしてdocDataを保存する
+        userRef.setData(docData) { (err) in
+            if let err = err {
+                print("Firestoreへの保存に失敗しました")
+                return
+            }
+            print("Firestoreへの保存に成功しました")
             
-            let docData = ["email": email,"name": name,"createdAt": Timestamp()] as [String : Any]
-            
-            //コレクション名をusersにしてドキュメントをユーザUIDにしてdocDataを保存する
-            Firestore.firestore().collection("users").document(uid).setData(docData) { (err) in
+            userRef.getDocument { (snapshot, err) in
                 if let err = err {
-                    print("Firestoreへの保存に失敗しました")
+                    print("ユーザ情報の取得に失敗しました\(err)")
                     return
                 }
-                print("Firestoreへの保存に成功しました")
+                //ここでuserRef下のデータを取得している
+                guard let data = snapshot?.data() else { return }
+                let user = User.init(dic: data)
+                print("ユーザ情報の取得ができました\(user.name)")
+                
+                let homeVCInstance = self.storyboard?.instantiateViewController(withIdentifier: "HomeVCID") as! HomeViewController
+                homeVCInstance.passedUser = user
+                self.navigationController?.pushViewController(homeVCInstance, animated: true)
             }
         }
-        
     }
 }
 

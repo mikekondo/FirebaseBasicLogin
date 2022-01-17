@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		955BC0F02793F57D00F6D3CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 955BC0EF2793F57D00F6D3CE /* GoogleService-Info.plist */; };
+		955BC0F227952D3C00F6D3CE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BC0F127952D3B00F6D3CE /* HomeViewController.swift */; };
 		957F139527925D330052C76B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957F139427925D330052C76B /* AppDelegate.swift */; };
 		957F139727925D330052C76B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957F139627925D330052C76B /* SceneDelegate.swift */; };
 		957F139927925D330052C76B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957F139827925D330052C76B /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		744D6A8FA425CB8312393B37 /* Pods-FireBaseBasicLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireBaseBasicLogin.debug.xcconfig"; path = "Target Support Files/Pods-FireBaseBasicLogin/Pods-FireBaseBasicLogin.debug.xcconfig"; sourceTree = "<group>"; };
 		79EABB109AFED976AE8BF0A8 /* Pods-FireBaseBasicLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireBaseBasicLogin.release.xcconfig"; path = "Target Support Files/Pods-FireBaseBasicLogin/Pods-FireBaseBasicLogin.release.xcconfig"; sourceTree = "<group>"; };
 		955BC0EF2793F57D00F6D3CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		955BC0F127952D3B00F6D3CE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		957F139127925D330052C76B /* FireBaseBasicLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireBaseBasicLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		957F139427925D330052C76B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		957F139627925D330052C76B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				957F139F27925D340052C76B /* LaunchScreen.storyboard */,
 				957F13A227925D340052C76B /* Info.plist */,
 				955BC0EF2793F57D00F6D3CE /* GoogleService-Info.plist */,
+				955BC0F127952D3B00F6D3CE /* HomeViewController.swift */,
 			);
 			path = FireBaseBasicLogin;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				955BC0F227952D3C00F6D3CE /* HomeViewController.swift in Sources */,
 				957F139927925D330052C76B /* ViewController.swift in Sources */,
 				957F139527925D330052C76B /* AppDelegate.swift in Sources */,
 				95FCAF8D2793BFBC00BA1B6D /* UIColor-Extention.swift in Sources */,
